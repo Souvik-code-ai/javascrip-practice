@@ -35,4 +35,4 @@ function amountOfPotatoes(string) {
     }
     return count;
 }
-console.log(amountOfPotatoes("potatoapple"));
+console.log(amountOfPotatoes("potato"));
