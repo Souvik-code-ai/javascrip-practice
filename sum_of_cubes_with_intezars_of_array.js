@@ -10,6 +10,9 @@ Notes
 If given an empty array, return 0.*/
 let array=[3,4,5];
 function sumOfCubesOfArrayValues(array){
+    if(array.length===0){
+        return 0;
+    }
     let ans=0;
     for(let i=0;i<array.length;i++){
         ans+=(array[i]**3);
