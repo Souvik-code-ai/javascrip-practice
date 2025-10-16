@@ -5,13 +5,13 @@ function findPairs(arr, target){
     let sum;
     let sub_array=[];
     let array=[];
-    for(let i=0;i<arr.length;i++){
-        for(j=i;j<(arr.length-1);j++){
+    for(let i=0;i<(arr.length-1);i++){
+        for(j=(i+1);j<arr.length;j++){
             sum=arr[i]+arr[j];
             if(sum===target){
-                sub_array.push(arr[i]);
-                sub_array.push(arr[j]);
+                sub_array.push(arr[i],arr[j]);
                 array.push(sub_array);
+                sub_array=[];
 
             }
             sum=0;
