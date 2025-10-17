@@ -13,7 +13,7 @@ function isomorphic(str1,str2){
         if(str1[i]===str1[i+1]){
             j=i;
             length=1;
-            while(str1[j]===str2[j+1]){
+            while(str1[j]===str1[j+1]){
                 length++;
                 j++;
             }
