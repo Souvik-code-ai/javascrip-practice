@@ -12,23 +12,45 @@ Notes
 let string_with_vowel="I have never seen a thin person drinking Diet Coke.";
 function stringAfterRemovingVowel(string_with_vowel){
     let vowel_removed_string;
+    let array_of_string=[];
+    let array_of_string_without_vowel=[];
     for(let i=0;i<string_with_vowel.length;i++){
-        if((string_with_vowel[i]==="a")||(string_with_vowel[i]==="A")){
-            vowel_removed_string=string_with_vowel.replaceAll(string_with_vowel[i],"");
+        array_of_string.push(string_with_vowel[i]);
+    }
+    //console.log(array_of_string)
+    for(let i=0;i<array_of_string.length;i++){
+        if(string_with_vowel[i]==="a"){
+            array_of_string.splice(i,1);
         }
-        else if((string_with_vowel[i]==="e")||(string_with_vowel[i]==="E")){
-            vowel_removed_string=string_with_vowel.replaceAll(string_with_vowel[i],"");
+        else if(string_with_vowel[i]==="e"){
+            array_of_string.splice(i,1);
         }
-        else if((string_with_vowel[i]==="o")||(string_with_vowel[i]==="O")){
-            vowel_removed_string=string_with_vowel.replaceAll(string_with_vowel[i],"");
+        else if(string_with_vowel[i]==="o"){
+            array_of_string.splice(i,1);
         }
-        else if((string_with_vowel[i]==="i")||(string_with_vowel[i]==="I")){
-            vowel_removed_string=string_with_vowel.replaceAll(string_with_vowel[i],"");
+        else if(string_with_vowel[i]==="i"){
+            array_of_string.splice(i,1);
         }
-        else if((string_with_vowel[i]==="u")||(string_with_vowel[i]==="U")){
-            vowel_removed_string=string_with_vowel.replaceAll(string_with_vowel[i],"");
+        else if(string_with_vowel[i]==="u"){
+            array_of_string.splice(i,1);
+        }
+        else if(string_with_vowel[i]==="A"){
+            array_of_string.splice(i,1);
+        }
+        else if(string_with_vowel[i]==="E"){
+            array_of_string.splice(i,1);
+        }
+        else if(string_with_vowel[i]==="I"){
+            array_of_string.splice(i,1);
+        }
+        else if(string_with_vowel[i]==="O"){
+            array_of_string.splice(i,1);
+        }
+        else if(string_with_vowel[i]==="U"){
+            array_of_string.splice(i,1);
         }
     }
-    return vowel_removed_string;
+    console.log(array_of_string);
+    return array_of_string.toString().replaceAll(",","");
 }
 console.log(stringAfterRemovingVowel(string_with_vowel));
