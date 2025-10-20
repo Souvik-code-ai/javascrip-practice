@@ -1,0 +1,18 @@
+/*Convert to Decimal Notation
+Create a function to convert an array of percentages to their decimal equivalents.
+Examples
+convertToDecimal(["1%", "2%", "3%"]) ➞ [0.01, 0.02, 0.03]
+convertToDecimal(["45%", "32%", "97%", "33%"]) ➞ [0.45, 0.32, 0.97, 0.33]
+convertToDecimal(["33%", "98.1%", "56.44%", "100%"]) ➞ [0.33, 0.981, 0.5644, 1]
+Notes
+N/A*/
+let array=["45%", "32%", "97%", "33%"];
+function percentageToDecimalConversio(array){
+    let array_of_decimal=[];
+    for(let i=0;i<array.length;i++){
+        array_of_decimal.push(parseFloat(array[i])/100);
+    }
+    return array_of_decimal;
+
+}
+console.log(percentageToDecimalConversio(array));
