@@ -1,5 +1,5 @@
 /*Star Pattern 8*/
-function star_pattern_7(N){
+function star_pattern_8(N){
     let j;
     for(let i=1;i<=N;i++){
         let row="";
@@ -20,4 +20,4 @@ function star_pattern_7(N){
         console.log(row);
     }
 }
-star_pattern_7(5);
+star_pattern_8(5);
