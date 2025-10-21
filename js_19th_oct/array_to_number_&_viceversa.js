@@ -9,7 +9,7 @@ toNumber([2, 3, 5]) ➞ 235
 toNumber([0]) ➞ 0
 Notes
 All test cases will be weakly positive numbers: >= 0*/
-/*let new_array=[];
+let new_array=[];
 function toArray(num){
     let num_string=num.toString();
     for(let i=0;i<num_string.length;i++){
@@ -17,7 +17,7 @@ function toArray(num){
     }
     return new_array;
 }
-console.log(toArray(2));*/
+console.log(toArray(2));
 let array;
 function toNumber(array){
     let array_to_number=array.reduce((prev,curr)=>{
