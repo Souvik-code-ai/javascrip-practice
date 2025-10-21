@@ -2,7 +2,7 @@
 function star_pattern_14(n){
      for(let i=1;i<=n;i++){
         let row="";
-        for(let j=65;j<=(65+i);j++){
+        for(let j=65;j<=(64+i);j++){
             row+=String.fromCharCode(j);
             
 
