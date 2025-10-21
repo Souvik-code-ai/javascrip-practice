@@ -20,16 +20,10 @@ function toArray(num){
 console.log(toArray(2));*/
 let array;
 function toNumber(array){
-   /* let array_string=array.toString();
-    let array_string_removed=array_string.replaceAll(",","");
-    console.log(array_string_removed);*/
     let array_to_number=array.reduce((prev,curr)=>{
         return ((prev*10)+curr);
 
     });
     return array_to_number;
-
-    /*for(let i=0;i<array_string_removed.length;i++)
-    return new_array;*/
 }
 console.log(toNumber([2,2,3]));
