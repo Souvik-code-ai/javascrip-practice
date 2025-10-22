@@ -1,36 +1,31 @@
 //Star Pattern 19
-function star_pattern_19(n) {
-    let x=0;
-    for (let i = 0; i<n; i++) {
-        let row = "";
-        for (let j = 1;j<=(n-i); j++) {
-            row += "*";
+function star_pattern_21(n){
+    let row;
+    for(let i=1;i<=(2*n);i++){
+        row="";
+        if(i<=n){
+            for(let j=1;j<=(n-i+1);j++){
+                row+="*";
+            }
+            for(let j=1;j<=(2*i-2);j++){
+                row+=" ";
+            }
+            for(let j=1;j<=(n-i+1);j++){
+                row+="*";
+            }
         }
-        for (let j = 0;j<x; j++) {
-            row += " ";
+        else if(i>n){
+            for(let j=1;j<=(i-n);j++){
+                row+="*";
+            }
+            for(let j=1;j<=((2*n-2*(i-n)));j++){
+                row+=" ";
+            }
+            for(let j=1;j<=(i-n);j++){
+                row+="*";
+            }
         }
-        for (let j = 1; j<=(n-i); j++) {
-            row += "*";
-        }
-        x+= 2; 
-        console.log(row);
-    }
-    x=2*n-2;
-    for (let i = 1; i<=n; i++) {
-        let row = "";
-        for (let j = 1;j<=i;j++) {
-            row += "*";
-        }
-        for (let j=0;j<x; j++) {
-            row += " ";
-        }
-
-        for (let j=1; j<=i;j++) {
-            row += "*";
-        }
-
-        x=x-2; 
         console.log(row);
     }
 }
-star_pattern_19(5);
+star_pattern_21(5)
