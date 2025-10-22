@@ -1,5 +1,5 @@
 //Star Pattern 19
-function star_pattern_21(n){
+function star_pattern_19(n){
     let row;
     for(let i=1;i<=(2*n);i++){
         row="";
@@ -28,4 +28,4 @@ function star_pattern_21(n){
         console.log(row);
     }
 }
-star_pattern_21(5)
+star_pattern_19(5)

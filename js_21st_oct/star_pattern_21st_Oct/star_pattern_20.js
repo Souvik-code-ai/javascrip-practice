@@ -1,31 +1,31 @@
 //star pattern 20
-function star_pattern_20(n) {
-    let gap=2*n-2;
-
-    for (let i = 1; i <= 2 * n - 1; i++) {
-        let row = "";
-        let stars = i <= n ? i : 2 * n - i;
-
-        for (let j = 1; j <= stars; j++) {
-            row += "*";
+function star_pattern_20(n){
+    let row;
+    for(let i=1;i<=(2*n);i++){
+        row="";
+        if(i<=n){
+            for(let j=1;j<=i;j++){
+                row+="*";
+            }
+            for(let j=1;j<=2*(n-i);j++){
+                row+=" ";
+            }
+            for(let j=1;j<=i;j++){
+                row+="*";
+            }
         }
-
-        for (let j = 1; j <= gap; j++) {
-            row += " ";
+        else if(i>n){
+            for(let j=1;j<=(2*n-i);j++){
+                row+="*";
+            }
+            for(let j=1;j<=2*(i-n);j++){
+                row+=" ";
+            }
+            for(let j=1;j<=(2*n-i);j++){
+                row+="*";
+            }
         }
-
-        for (let j = 1; j <= stars; j++) {
-            row += "*";
-        }
-
         console.log(row);
-        if (i < n) {
-            gap -= 2;
-        } else {
-            gap+= 2;
-        }
     }
 }
-
-
-star_pattern_20(5);
+star_pattern_20(5)

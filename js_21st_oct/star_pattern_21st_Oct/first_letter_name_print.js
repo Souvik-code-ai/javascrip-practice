@@ -31,4 +31,4 @@ function firstAlphabeticalLetterOfMyName(n){
         console.log(row);
     }
 }
-firstAlphabeticalLetterOfMyName(4);
+firstAlphabeticalLetterOfMyName(6);
