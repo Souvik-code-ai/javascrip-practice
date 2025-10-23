@@ -14,16 +14,7 @@ function thirdLastLetter(n) {
         for (let j = 1; j <= ((2 * (n - i))+ 1); j++) {
             row += " ";
         }
-        // for (let j = 1; j <= i; j++) {
-        //     if (j === i) {
-        //         row += "*";
-        //     }
-        //     else if(j!==i){
-        //         row += "*";
-        //     }
-        //     // row+="*";
-        // }
-        //row+="*";
+    
         if(i===(n+1)){
             row+="";
         }
