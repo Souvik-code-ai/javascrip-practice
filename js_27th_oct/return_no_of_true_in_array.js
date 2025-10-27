@@ -10,7 +10,7 @@
 // Notes
 // Return 0 if given an empty array.
 // All array items are of the type bool (true or false).
-let array=[false, false, false, false];
+let array=[true, false, false, true, false];
 function countTrue(array){
     let no_of_true=0;
     for(let i=0;i<array.length;i++){
@@ -21,3 +21,5 @@ function countTrue(array){
     return no_of_true;
 }
 console.log(countTrue(array));
+//time-complexity:O(n)
+//space-cpmplexity:O(1)
