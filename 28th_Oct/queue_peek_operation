@@ -1,0 +1,59 @@
+class Queue {
+  constructor() {
+    this.queue = [];
+  }
+
+  // Add element to the end of the queue
+  enqueue(data) {
+    this.queue.push(data);
+  }
+
+  // Remove element from the front of the queue
+  dequeue() {
+    if (this.queue.length === 0) {
+      return "Queue is empty";
+    }
+    return this.queue.shift();
+  }
+
+  // Peek at the front element (without removing it)
+  peek() {
+    if (this.queue.length === 0) {
+      return "Queue is empty";
+    }
+    return this.queue[0];
+  }
+
+  // Print all elements in the queue
+  printQueue() {
+    let str="";
+    for(let i=0;i<this.queue.length;i++){
+      str+=this.queue[i]+"\n";
+    }
+    return str;
+  }
+  
+}
+
+// Example usage
+let myQueue = new Queue();
+myQueue.enqueue(10);
+myQueue.enqueue(20);
+myQueue.enqueue(30);
+
+console.log("Queue:", myQueue.printQueue());
+console.log("Peek (front element):", myQueue.peek());
+// | Method         | Time Complexity | Space Complexity | Notes                           |
+// | -------------- | --------------- | ---------------- | ------------------------------- |
+// | `enqueue()`    | O(1) amortized  | O(1)             | Push to end of array            |
+// | `dequeue()`    | O(n)            | O(1)             | Shift from front (costly)       |
+// | `peek()`       | O(1)            | O(1)             | Just access first element       |
+// | `printQueue()` | O(n)            | O(n)             | Builds a string of all elements |
+// When you call shift() on an array in JavaScript:
+
+// It removes the first element (index 0).
+
+// Then it must move all the remaining elements one position to the left to fill the gap.
+// Each call to shift() takes O(n) time because it reindexes all remaining elements.
+
+// It’s not just “remove one element” — it’s also “rearrange everything else”.
