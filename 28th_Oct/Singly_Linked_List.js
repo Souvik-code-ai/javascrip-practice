@@ -2,6 +2,7 @@ class Node {
   constructor(data) {
     this.data = data;
     this.next = null;
+    this.prev=null;
   }
 }
 class LinkedList {
@@ -69,7 +70,37 @@ class LinkedList {
     list += "null";
     console.log(list);
   }
+  printListBackward() {
+  if (!this.head) return "";
+
+  let prev = null;
+  let current = this.head;
+  let next = null;
+
+  // Reverse the list
+  while (current !== null) {
+    next = current.next;
+    current.next = prev;
+    prev = current;
+    current = next;
+  }
+
+  // Update head to new first node (previous tail)
+  this.head = prev;
+
+  // Build string of reversed list
+  let list = "";
+  let node = this.head;
+  while (node !== null) {
+    list += node.data + " ";
+    node = node.next;
+  }
+
+  return list.trim();
 }
+
+}
+
 // Create a new linked list
 let myList = new LinkedList();
 
@@ -79,17 +110,29 @@ myList.add(20);
 myList.add(30);
 myList.add(40);
 
-console.log("Initial Linked List:");
-myList.printList(); // 10 -> 20 -> 30 -> 40 -> null
+// console.log("Initial Linked List:");
+// myList.printList(); // 10 -> 20 -> 30 -> 40 -> null
 
-// Remove a node
-myList.remove(20);
-console.log("After removing 20:");
-myList.printList(); // 10 -> 30 -> 40 -> null
+// // Remove a node
+// myList.remove(20);
+// console.log("After removing 20:");
+// myList.printList(); // 10 -> 30 -> 40 -> null
 
-// Find a node
-let node = myList.find(30);
-console.log("Found node:", node ? node.data : "Not found");
+// // Find a node
+// let node = myList.find(30);
+// console.log("Found node:", node ? node.data : "Not found");
+
+
+console.log( myList.printListBackward());
+
+
+
+
+
+
+
+
+
 // | Operation         | Count                | Time | Dominant? |
 // | ----------------- | -------------------- | ---- | --------- |
 // | 4 × `add()`       | 4 × O(n) → O(n) each | O(n) |           |

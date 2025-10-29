@@ -34,5 +34,5 @@ myStack.push(1);
 
 console.log("Your stack is:\n" + myStack.printStack());
 console.log("Top element (peek):", myStack.peek());
-//Time complexity:O(1)[for push & constructor class]+O(n)[for printstack method]=O(n);
-//space complexity:O(1)[for push & constructor class]+O(n)[for printstack method]=O(n)
+//Time complexity:O(1)[for peek & constructor class]+O(n)[for printstack method]=O(n);
+//space complexity:O(1)[for peek & constructor class]+O(n)[for printstack method]=O(n)
