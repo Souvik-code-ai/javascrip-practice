@@ -1,0 +1,29 @@
+//Binary Search Tree
+let array=[1,2,3,7,9,11,13,20,21,28];
+let n=array.length;
+let start_index=0;
+let end_index=(n-1);
+function binarySearch(start_index,end_index,array,target){
+    if(start_index>end_index){
+        return -1;
+    }
+    let mid_index;
+    if((start_index+end_index)%2===0){
+        mid_index=(start_index+end_index)/2;
+    }
+    else if(((start_index+end_index)%2)!==0){
+        mid_index=parseInt((start_index+end_index)/2);
+    }
+    if(array[mid_index]<target){
+        return binarySearch((mid_index+1),end_index,array,target);
+    }
+    else if(array[mid_index]>target){
+        return binarySearch(start_index,(mid_index-1),array,target);
+    }
+    else{
+        return mid_index;
+    }
+}
+console.log(binarySearch(start_index,end_index,array,7));
+//time complexity:O(logn)
+//space complexity:O(logn)
