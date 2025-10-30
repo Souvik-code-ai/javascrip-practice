@@ -7,12 +7,7 @@ for(let i=0;i<(array.length-1);i++){
     temp=i;
 
     for(j=(i+1);j<array.length;j++){
-        // if(temp<array[j]){
-        //     // // temp=array[j+1];
-        //     // let x = array[j];
-        //     // array[j]=array[i];
-        //     // array[i]=x;
-        // }
+   
         if(array[temp]>array[j]){
             temp=j;
         }
