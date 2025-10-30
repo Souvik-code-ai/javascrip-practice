@@ -118,11 +118,16 @@ dll.printBackward();
 // Find a node
 let node = dll.find(30);
 console.log("\nFound node:", node ? node.data : "Not found");
-// | Operation         | Calls | Time                     | Space |
-// | ----------------- | ----- | ------------------------ | ----- |
-// | `add()`           | 4     | O(1) each → O(1) overall | O(1)  |
-// | `printForward()`  | 2     | O(n)                     | O(n)  |
-// | `printBackward()` | 2     | O(n)                     | O(n)  |
-// | `remove()`        | 1     | O(n)                     | O(1)  |
-// | `find()`          | 1     | O(n)                     | O(1)  |
+// | Operation                         | Singly Linked List                                               | Doubly Linked List               | Explanation                                                  |
+// | --------------------------------- | ---------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------ |
+// | **Traversal**                     | O(n)                                                             | O(n)                             | You may need to visit all nodes either way.                  |
+// | **Search**                        | O(n)                                                             | O(n)                             | You still have to look through all elements.                 |
+// | **Insert at Head**                | O(1)                                                             | O(1)                             | Just adjust a couple of pointers.                            |
+// | **Insert at Tail**                | O(n) *(if no tail pointer)* <br> O(1) *(if tail pointer stored)* | O(1)                             | DLL can directly use `prev` pointer or maintain tail easily. |
+// | **Insert in Middle (after node)** | O(1) *(if node reference given)*                                 | O(1) *(if node reference given)* | Same, constant-time insertion once the node is known.        |
+// | **Delete Head**                   | O(1)                                                             | O(1)                             | Just move head to next (and fix prev if DLL).                |
+// | **Delete Tail**                   | O(n) *(need previous node)*                                      | O(1)                             | DLL can use `prev` pointer.                                  |
+// | **Delete in Middle (given node)** | O(n) *(need to find previous node)*                              | O(1)                             | DLL can access `prev` directly.                              |
+// | **Reverse List**                  | O(n)                                                             | O(n)                             | Both can be reversed in linear time.                         |
+
 
