@@ -52,3 +52,17 @@ for (let i = (n - 1); i >= 0; i--) {
     }
 }
 console.log(array);
+// | Operation                    | Complexity        | Explanation                                                                                            |
+// | ---------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------ |
+// | **Building the heap**        | (O(n))            | Using the “heapify” process bottom-up, it takes linear time to build a heap from an array of size (n). |
+// | **Extracting max (n times)** | (O(n \log n))     | Each extraction (removing the max element and re-heapifying) takes (O(\log n)), repeated (n) times.    |
+// | **Overall time complexity**  | **(O(n \log n))** | Dominated by the extraction step.                                                                      |
+// | Aspect              | Complexity | Explanation                                                                            |
+// | ------------------- | ---------- | -------------------------------------------------------------------------------------- |
+// | **Auxiliary space** | (O(1))     | Heap sort is performed **in place**, requiring only a constant amount of extra memory. |
+// | **Total space**     | (O(1))     | In-place sorting — no extra data structures used (aside from the input array).         |
+// | Case        | Time Complexity | Space Complexity | Stable? |
+// | ----------- | --------------- | ---------------- | ------- |
+// | **Best**    | (O(n \log n))   | (O(1))           | ❌ No    |
+// | **Average** | (O(n \log n))   | (O(1))           | ❌ No    |
+// | **Worst**   | (O(n \log n))   | (O(1))           | ❌ No    |
